@@ -1,0 +1,166 @@
+{% extends 'base.html' %} 
+<!-- Page Title -->
+{% block title %} Home {% endblock title %} 
+
+<!-- Page - Body -->
+{% block body %}
+
+<!-- New code -->
+<table class="table table-hover text-center table-bordered">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">RegNo</th>
+      <th scope="col">Name</th>
+      <th scope="col">MAT206</th>
+      <th scope="col">CST202</th>
+      <th scope="col">CST204</th>
+      <th scope="col">CST206</th>
+      <th scope="col">EST200</th>
+      <th scope="col">MCN202</th>
+      <th scope="col">CSL202</th>
+      <th scope="col">CSL204</th>
+      <th scope="col">Earned_Credits</th>
+      <th scope="col">Cumilative_Credits</th>
+      <th scope="col">SGPA</th>
+      <th scope="col">CGPA</th>
+    </tr>
+  </thead>
+  <tbody>
+      <!-- Jinja For loop-->
+  {% for row in data %}
+    <tr>
+      <th scope="row">{{ row.id }}</th>
+      <td>{{ row.RegNo }}</td>
+      <td>{{ row.Name }}</td>
+
+
+      <!-- if block - F-->
+      {% if row.MAT206 == "F" %}
+      <td class="table-danger">{{ row.MAT206 }}</td>
+      {% else %}
+      <!-- if block - FE -->
+      {% if row.MAT206 == "FE" %}
+      <td class="table-warning">{{ row.MAT206 }}</td>
+      {% else %}
+      <td >{{ row.MAT206 }}</td>
+      <!-- if block - FE -->
+      {% endif %}
+      <!-- If Block - F-->
+      {% endif %}
+      
+      <!--  -->
+      <!-- if block - F-->
+      {% if row.CST202 == "F" %}
+      <td class="table-danger">{{ row.CST202 }}</td>
+      {% else %}
+      <!-- if block - FE -->
+      {% if row.CST202 == "FE" %}
+      <td class="table-warning">{{ row.CST202 }}</td>
+      {% else %}
+      <td >{{ row.CST202 }}</td>
+      <!-- if block - FE -->
+      {% endif %}
+      <!-- If Block - F-->
+      {% endif %}
+
+      <!--  -->
+      <!-- if block - F-->
+      {% if row.CST204 == "F" %}
+      <td class="table-danger">{{ row.CST204 }}</td>
+      {% else %}
+      <!-- if block - FE -->
+      {% if row.CST204 == "FE" %}
+      <td class="table-warning">{{ row.CST204 }}</td>
+      {% else %}
+      <td >{{ row.CST204 }}</td>
+      <!-- if block - FE -->
+      {% endif %}
+      <!-- If Block - F-->
+      {% endif %}
+
+      <!--  -->
+      <!-- if block - F-->
+      {% if row.CST206 == "F" %}
+      <td class="table-danger">{{ row.CST206 }}</td>
+      {% else %}
+      <!-- if block - FE -->
+      {% if row.CST206 == "FE" %}
+      <td class="table-warning">{{ row.CST206 }}</td>
+      {% else %}
+      <td >{{ row.CST206 }}</td>
+      <!-- if block - FE -->
+      {% endif %}
+      <!-- If Block - F-->
+      {% endif %}
+
+      <!--  -->
+      <!-- if block - F-->
+      {% if row.EST200 == "F" %}
+      <td class="table-danger">{{ row.EST200 }}</td>
+      {% else %}
+      <!-- if block - FE -->
+      {% if row.EST200 == "FE" %}
+      <td class="table-warning">{{ row.EST200 }}</td>
+      {% else %}
+      <td >{{ row.EST200 }}</td>
+      <!-- if block - FE -->
+      {% endif %}
+      <!-- If Block - F-->
+      {% endif %}
+
+      <!--  -->
+      <!-- if block - F-->
+      {% if row.MCN202 == "F" %}
+      <td class="table-danger">{{ row.MCN202 }}</td>
+      {% else %}
+      <!-- if block - FE -->
+      {% if row.MCN202 == "FE" %}
+      <td class="table-warning">{{ row.MCN202 }}</td>
+      {% else %}
+      <td >{{ row.MCN202 }}</td>
+      <!-- if block - FE -->
+      {% endif %}
+      <!-- If Block - F-->
+      {% endif %}
+      
+      <!--  -->
+      <!-- if block - F-->
+      {% if row.CSL202 == "F" %}
+      <td class="table-danger">{{ row.CSL202 }}</td>
+      {% else %}
+      <!-- if block - FE -->
+      {% if row.CSL202 == "FE" %}
+      <td class="table-warning">{{ row.CSL202 }}</td>
+      {% else %}
+      <td >{{ row.CSL202 }}</td>
+      <!-- if block - FE -->
+      {% endif %}
+      <!-- If Block - F-->
+      {% endif %}
+      
+      <!--  -->
+      <!-- if block - F-->
+      {% if row.CSL204 == "F" %}
+      <td class="table-danger">{{ row.CSL204 }}</td>
+      {% else %}
+      <!-- if block - FE -->
+      {% if row.CSL204 == "FE" %}
+      <td class="table-warning">{{ row.CSL204 }}</td>
+      {% else %}
+      <td >{{ row.CSL204 }}</td>
+      <!-- if block - FE -->
+      {% endif %}
+      <!-- If Block - F-->
+      {% endif %}
+
+      
+      <td>{{ row.Earned_Credits }}</td>
+      <td>{{ row.Cumilative_Credits }}</td>
+      <td>{{ row.SGPA }}</td>
+      <td>{{ row.CGPA }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock body %}
