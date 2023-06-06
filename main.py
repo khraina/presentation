@@ -58,6 +58,7 @@ class Student(db.Model):
     # User_id = db.Column(db.Integer,db.ForeignKey('user.id'))
     
 
+
 login_manager = LoginManager()
 login_manager.login_view = 'login'
 login_manager.init_app(app)
@@ -303,7 +304,7 @@ def filter_By_Grade():
        Selct_value = request.form.get('Select_value')
        text = ''
        if Selct_value == "1":
-            return redirect('/')
+            return redirect('/tables')
        elif Selct_value == "2":
             return redirect('/f_grade')
        elif Selct_value == "3":

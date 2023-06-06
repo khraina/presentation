@@ -1,12 +1,12 @@
 {% extends 'base.html' %} 
 <!-- Page Title -->
-{% block title %} Grade {% endblock title %} 
+{% block title %} FE_Grade {% endblock title %} 
 
 <!-- Page - Body -->
 {% block body %}
 
 <!-- New code -->
-<h1 class="mt-4">F Grade Students</h1>
+<h1 class="mt-4">FE Grade Students</h1>
 <table class="table table-hover text-center table-bordered">
     <thead>
         <tr>
@@ -31,49 +31,49 @@
                     <td>{{ student.RegNo }}</td>
                     <td>{{ student.Name }}</td>
                     <!-- Math -->
-                    {% if student.MAT206 == "F" %}
+                    {% if student.MAT206 == "FE" %}
                         <td>{{ student.MAT206 }}</td>
                     {% else %}
                         <td> - </td>
                     {% endif %}
                     
-                    {% if student.CST202 == "F" %}
+                    {% if student.CST202 == "FE" %}
                         <td>{{ student.CST202 }}</td>
                     {% else %}
                         <td> - </td>
                     {% endif %}
 
-                    {% if student.CST204 == "F" %}
+                    {% if student.CST204 == "FE" %}
                         <td>{{ student.CST204 }}</td>
                     {% else %}
                     <td> - </td>
                     {% endif %}
 
-                    {% if student.CST206 == "F" %}
+                    {% if student.CST206 == "FE" %}
                         <td>{{ student.CST206 }}</td>
                     {% else %}
                     <td> - </td>
                     {% endif %}
 
-                    {% if student.EST200 == "F" %}
+                    {% if student.EST200 == "FE" %}
                         <td>{{ student.EST200 }}</td>
                     {% else %}
                     <td> - </td>
                     {% endif %}
 
-                    {% if student.MCN202 == "F" %}
+                    {% if student.MCN202 == "FE" %}
                         <td>{{ student.MCN202 }}</td>
                     {% else %}
                     <td> - </td>
                     {% endif %}
 
-                    {% if student.CSL202 == "F" %}
+                    {% if student.CSL202 == "FE" %}
                         <td>{{ student.CSL202 }}</td>
                     {% else %}
                     <td> - </td>
                     {% endif %}
 
-                    {% if student.CSL204 == "F" %}
+                    {% if student.CSL204 == "FE" %}
                         <td>{{ student.CSL204 }}</td>
                     {% else %}
                     <td> - </td>
